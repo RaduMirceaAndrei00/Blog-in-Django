@@ -1,5 +1,9 @@
-{% for post in posts %}
-    <div>
-        <h2><a href="">{{ post.title }}</a></h2>
-    </div>
-{% endfor %}
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div>
+            <h2><a href="">{{ post.title }}</a></h2>
+        </div>
+    {% endfor %}    
+{% endblock content %}
