@@ -1,8 +1,14 @@
 {% extends 'blog/base.html' %}
 
+{% block header %}
+    <h1><a href="/">Radu Mircea-Andrei Blog</a></h1>
+    <button><a href="/">Blog</a></button>
+    <button><a href="/cv">CV</a></button>
+{% endblock %}
+
 {% block content %}
     {% for post in posts %}
-        <div>
+        <div class="list">
             <h2><a href="{% url 'post_content' pk=post.pk %}">{{ post.title }}</a></h2>
         </div>
     {% endfor %}    
