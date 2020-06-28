@@ -1,15 +1,18 @@
 {% extends 'blog/base.html' %}
 
 {% block header %}
-    <h1><a href="/">Radu Mircea-Andrei Blog</a></h1>
-    <button><a href="/">Blog</a></button>
-    <button><a href="/cv">CV</a></button>
+    <h1><a href="/" class="title">Radu Mircea-Andrei Blog</a></h1>
+{% endblock %}
+
+{% block menu %}
+    <a href="/" class="aButton"><button class="currentButton">Blog</button></a>
+    <a href="/cv" class="aButton"><button>CV</button></a>
 {% endblock %}
 
 {% block content %}
     {% for post in posts %}
         <div class="list">
-            <h2><a href="{% url 'post_content' pk=post.pk %}">{{ post.title }}</a></h2>
+            <h2 class="postTitleList"><a href="{% url 'post_content' pk=post.pk %}" class="aTitle">{{ post.title }}</a></h2>
         </div>
     {% endfor %}    
 {% endblock content %}

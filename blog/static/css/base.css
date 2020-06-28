@@ -1,0 +1,195 @@
+p, h1, h2, h3 {
+    font-family: 'Lato', sans-serif;
+    color: #314152;
+}
+
+body{
+    margin-top: none;
+    padding-top: none;
+    margin-bottom: 7%;
+}
+
+
+.title {
+    color: white;
+    font-size: 120%;
+    left: 40%;
+    top: 20px;
+    position: relative;
+}
+
+.menu {
+    top: 95px;
+    left: 45%;
+    position: absolute;
+    display: inline-block;
+}
+
+.header {
+    top: -20px;
+    left: 0;
+    height: 95px;
+    width: 100%;
+    position: relative;
+    background-color: #314152;
+}
+
+button {
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0;
+    outline: none;
+}
+
+button:hover {
+    background-color: #314152;
+    color: white;
+}
+
+.currentButton {
+    background-color: #314152;
+    color: white;
+}
+
+.aButton {
+    color: #314152;
+    margin: none;
+    border: none;
+}
+
+.aTitle{
+    color: #314152;
+}
+
+.title:hover, .aButton:hover {
+    color: white;
+}
+
+.content{
+    margin-top: 100px;
+}
+
+.date, .postTitle, .text, .list, .cvTitle{
+    margin-left: 12%;
+    margin-right: 10%;
+}
+
+.text, .list{
+    font-size: 140%;
+}
+
+.postTitleList {
+    font-size: 200%;
+    margin-top: 30px;
+}
+
+.postTitleContent {
+    font-size: 300%;
+    margin-top: 30px;
+}
+
+.cvTitle {
+    font-size: 290%;
+}
+
+.footer {
+    bottom: 0;
+    height: 95px;
+    width: 100%;
+    position: absolute;
+    background-color: #314152;
+}
+
+
+@media only screen and (max-width: 1400px){
+    .title {
+        font-size: 100%;
+        left: 35%;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .title {
+        font-size: 100%;
+        left: 30%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .title {
+        font-size: 100%;
+        left: 25%;
+    }
+    .menu{
+        left: 35%;
+        /*osition: fixed;*/
+        display: inline-block;
+    }
+}
+
+
+@media only screen and (max-width: 600px){
+    .title {
+        font-size: 90%;
+        left: 15%;
+        position: relative;
+    }
+    .menu{
+        left: 25%;
+        /*position: fixed;*/
+        display: inline-block;
+    }
+    .date, .postTitle, .text, .list, .cvTitle{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (max-height: 700px){
+    .title {
+        top: 10px;
+        font-size: 80%;
+    }
+    .menu{
+        top: 60px;
+        /*position: fixed;*/
+        display: inline-block;
+    }
+    .header{
+        height: 60px;
+        /*position: fixed;*/
+    }
+    .footer{
+        height: 60px;
+    }
+    button{
+        padding: 10px 22px;
+        font-size: 11px;
+    }
+    .content{
+        margin-top: 50px;
+    }
+    .text, .list{
+        font-size: 110%;
+    }
+
+    .postTitleList {
+        font-size: 210%;
+        margin-top: 20px;
+    }
+
+    .postTitleContent {
+        font-size: 250%;
+        margin-top: 10px;
+    }
+
+    .cvTitle {
+        font-size: 230%;
+    }    
+}
+

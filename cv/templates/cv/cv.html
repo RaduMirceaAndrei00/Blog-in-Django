@@ -1,13 +1,16 @@
 {% extends 'blog/base.html' %}
 
 {% block header %}
-    <h1><a href="/">Radu Mircea-Andrei CV</a></h1>
-    <button><a href="/">Blog</a></button>
-    <button><a href="/cv">CV</a></button>
+    <h1><a href="/cv" class="title">Radu Mircea-Andrei CV</a></h1>
+{% endblock %}
+
+{% block menu %}
+    <a href="/" class="aButton"><button>Blog</button></a>
+    <a href="/cv" class="aButton"><button class="currentButton">CV</button></a>
 {% endblock %}
 
 {% block content %}
-    <h2>Projects And Achievements</h2>
+    <h2  class="cvTitle">Projects And Achievements</h2>
     {% for project_or_achievement in projects_and_achievements %}
         <div class="list">
             <h3>{{ project_or_achievement.title }}</h3>
@@ -15,28 +18,28 @@
         </div>
     {% endfor %}
 
-    <h2>Technical Skills</h2>
+    <h2 class="cvTitle">Technical Skills</h2>
     {% for technical_skill in technical_skills %}
         <div class="list">
             <p>{{ technical_skill.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
 
-    <h2>Skills</h2>
+    <h2 class="cvTitle">Skills</h2>
     {% for skill in skills %}
         <div class="list">
             <p>{{ skill.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
 
-    <h2>Awards</h2>
+    <h2 class="cvTitle">Awards</h2>
     {% for award in awards %}
         <div class="list">
             <p>{{ award.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
 
-    <h2>Languages</h2>
+    <h2 class="cvTitle">Languages</h2>
     {% for language in languages %}
         <div class="list">
             <p>{{ language.text|linebreaksbr }}</p>

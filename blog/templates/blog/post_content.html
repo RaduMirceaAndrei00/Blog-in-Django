@@ -1,9 +1,12 @@
 {% extends 'blog/base.html' %}
 
 {% block header %}
-    <h1><a href="/">Radu Mircea-Andrei Blog</a></h1>
-    <button><a href="/">Blog</a></button>
-    <button><a href="/cv">CV</a></button>
+    <h1><a href="/" class="title">Radu Mircea-Andrei Blog</a></h1>
+{% endblock %}
+
+{% block menu %}
+    <a href="/" class="aButton"><button>Blog</button></a>
+    <a href="/cv" class="aButton"><button>CV</button></a>
 {% endblock %}
 
 {% block content %}
@@ -11,8 +14,8 @@
         {{ post.published_date }}
     </div>
 
-    <div class="title">
-        <h2>{{ post.title }}</h2>
+    <div class="postTitle">
+        <h2 class="postTitleContent">{{ post.title }}</h2>
     </div>
 
     <div class="text">
